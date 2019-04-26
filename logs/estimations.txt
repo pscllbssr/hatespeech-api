@@ -41,3 +41,8 @@
 {'text': 'asdf', 'text_cleaned': 'asdf', 'clf': 'v1_rf', 'bin': False, 'prob': [0.905648097979535, 0.0943519020204651]}
 {'text': 'asdf', 'text_cleaned': 'asdf', 'clf': 'v2_rf', 'bin': False, 'prob': [1.0, 0.0]}
 {'text': 'diese lügenpresse schreibt mal wieder einen schmarren', 'text_cleaned': 'lügenpresse schreibt mal schmarren', 'clf': 'v2_rf', 'bin': True, 'prob': [0.0, 1.0]}
+{'text': 'Ich finde Hitler war super aber der Holocaust ist ein Fliegenschiss der Geschichte» hat mal einer gesagt.', 'text_cleaned': 'finde hitler super holocaust fliegenschiss geschichte mal gesagt', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'Ich finde Hitler war super aber der Holocaust ist ein Fliegenschiss der Geschichte» hat mal einer gesagt.', 'text_cleaned': 'finde hitler super holocaust fliegenschiss geschichte mal gesagt', 'clf': 'v2_mnb', 'bin': False, 'prob': [0.9832607572221193, 0.016739242777815938]}
+{'text': 'Ich finde Hitler war super aber der Holocaust ist ein Fliegenschiss der Geschichte» hat mal einer gesagt.', 'text_cleaned': 'finde hitler super holocaust fliegenschiss geschichte mal gesagt', 'clf': 'v1_rf', 'bin': False, 'prob': [0.9031743118311346, 0.09682568816886555]}
+{'text': 'Ich finde Hitler war super aber der Holocaust ist ein Fliegenschiss der Geschichte» hat mal einer gesagt.', 'text_cleaned': 'finde hitler super holocaust fliegenschiss geschichte mal gesagt', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'Ich finde Hitler war super aber der Holocaust ist ein Fliegenschiss der Geschichte» hat mal einer gesagt.', 'text_cleaned': 'finde hitler super holocaust fliegenschiss geschichte mal gesagt', 'clf': 'v2_mnb', 'bin': False, 'prob': [0.9832607572221193, 0.016739242777815938]}
