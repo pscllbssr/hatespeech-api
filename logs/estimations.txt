@@ -1,1 +1,43 @@
 {'text': '"dieses scheiss gesindel pack"', 'text_cleaned': 'scheiss gesindel pack', 'bin': False, 'prob': [0.6672312804504615, 0.33276871954953846]}
+{'text': '"dieses scheiss gesindel pack"', 'text_cleaned': 'scheiss gesindel pack', 'bin': False, 'prob': [0.6672312804504615, 0.33276871954953846]}
+{'text': 'scheiss gesindel pack', 'text_cleaned': 'scheiss gesindel pack', 'bin': False, 'prob': [0.6672312804504615, 0.33276871954953846]}
+{'text': 'scheiss gesindel pack lügenpresse', 'text_cleaned': 'scheiss gesindel pack lügenpresse', 'bin': False, 'prob': [0.5552956116184561, 0.44470438838154386]}
+{'text': 'scheiss gesindel pack lügenpresse schweine', 'text_cleaned': 'scheiss gesindel pack lügenpresse schweine', 'bin': True, 'prob': [0.4829649396300531, 0.517035060369947]}
+{'text': 'gesindel scheiss pack', 'text_cleaned': 'gesindel scheiss pack', 'bin': False, 'prob': [0.6672312804504615, 0.33276871954953846]}
+{'text': 'gesindel scheiss pack', 'text_cleaned': 'gesindel scheiss pack', 'bin': True, 'prob': [0.0, 1.0]}
+{'text': 'dieses gesindel soll zurück wo der pfeffer wächst', 'text_cleaned': 'gesindel zurück pfeffer wächst', 'bin': True, 'prob': [0.2, 0.8]}
+{'text': 'hitler ist der grösste', 'text_cleaned': 'hitler grösste', 'bin': False, 'prob': [0.7, 0.3]}
+{'text': 'hitler ist der grösste', 'text_cleaned': 'hitler grösste', 'bin': False, 'prob': [0.7, 0.3]}
+{'text': 'hitler ist der grösste', 'text_cleaned': 'hitler grösste', 'bin': False, 'prob': [0.7, 0.3]}
+{'text': 'hitler ist der grösste', 'text_cleaned': 'hitler grösste', 'bin': False, 'prob': [0.7, 0.3]}
+{'text': 'hitler ist der grösste', 'text_cleaned': 'hitler grösste', 'bin': False, 'prob': [0.9993925760724658, 0.000607423927538408]}
+{'text': 'scheiss gesindel pack', 'text_cleaned': 'scheiss gesindel pack', 'bin': True, 'prob': [2.0084190678654924e-23, 1.0]}
+{'text': 'scheiss gesindel pack', 'text_cleaned': 'scheiss gesindel pack', 'clf': 'v2, mnb', 'bin': True, 'prob': [2.0084190678654924e-23, 1.0]}
+{'text': 'scheiss gesindel pack', 'text_cleaned': 'scheiss gesindel pack', 'clf': 'v2, rf', 'bin': True, 'prob': [0.0, 1.0]}
+{'text': 'scheiss gesindel pack', 'text_cleaned': 'scheiss gesindel pack', 'clf': 'v1, rf', 'bin': False, 'prob': [0.6672312804504615, 0.33276871954953846]}
+{'text': 'gesindel', 'text_cleaned': 'gesindel', 'clf': RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=None,
+            oob_score=False, random_state=None, verbose=0,
+            warm_start=False), 'bin': True, 'prob': [0.3, 0.7]}
+{'text': 'gesindel', 'text_cleaned': 'gesindel', 'clf': 'v2_rf', 'bin': True, 'prob': [0.3, 0.7]}
+{'text': 'das ist ein normaler kommentar\n', 'text_cleaned': 'normaler kommentar ', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'deine mutter', 'text_cleaned': 'mutter', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'scheiss juden', 'text_cleaned': 'scheiss juden', 'clf': 'v2_rf', 'bin': False, 'prob': [0.6, 0.4]}
+{'text': 'juden wollen die welt beherrschen', 'text_cleaned': 'juden welt beherrschen', 'clf': 'v2_rf', 'bin': False, 'prob': [1.0, 0.0]}
+{'text': 'lügenpresse!', 'text_cleaned': 'lügenpresse', 'clf': 'v2_rf', 'bin': True, 'prob': [0.0, 1.0]}
+{'text': 'die lügenpresse schreibt mal wieder einen riesen seich', 'text_cleaned': 'lügenpresse schreibt mal riesen seich', 'clf': 'v2_rf', 'bin': True, 'prob': [0.0, 1.0]}
+{'text': 'dieses gesindel pack sollte schnell verschwinden', 'text_cleaned': 'gesindel pack schnell verschwinden', 'clf': 'v2_rf', 'bin': True, 'prob': [0.1, 0.9]}
+{'text': 'dieses gesindel pack sollte schnell verschwinden', 'text_cleaned': 'gesindel pack schnell verschwinden', 'clf': 'v2_rf', 'bin': True, 'prob': [0.1, 0.9]}
+{'text': 'dieses gesindel pack sollte schnell verschwinden', 'text_cleaned': 'gesindel pack schnell verschwinden', 'clf': 'v2_rf', 'bin': True, 'prob': [0.1, 0.9]}
+{'text': 'deine mutter ist schwarz und du weisst es nicht', 'text_cleaned': 'mutter schwarz weisst', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'deine mutter ist schwarz und du weisst es nicht', 'text_cleaned': 'mutter schwarz weisst', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'deine mutter ist schwarz und du weisst es nicht', 'text_cleaned': 'mutter schwarz weisst', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'deine mutter ist schwarz und du weisst es nicht', 'text_cleaned': 'mutter schwarz weisst', 'clf': 'v2_rf', 'bin': False, 'prob': [0.8, 0.2]}
+{'text': 'asdf', 'text_cleaned': 'asdf', 'clf': 'v2_rf', 'bin': False, 'prob': [1.0, 0.0]}
+{'text': 'asdf', 'text_cleaned': 'asdf', 'clf': 'v2_mnb', 'bin': True, 'prob': [0.47676476273754836, 0.5232352372624504]}
+{'text': 'asdf', 'text_cleaned': 'asdf', 'clf': 'v1_rf', 'bin': False, 'prob': [0.905648097979535, 0.0943519020204651]}
+{'text': 'asdf', 'text_cleaned': 'asdf', 'clf': 'v2_rf', 'bin': False, 'prob': [1.0, 0.0]}
+{'text': 'diese lügenpresse schreibt mal wieder einen schmarren', 'text_cleaned': 'lügenpresse schreibt mal schmarren', 'clf': 'v2_rf', 'bin': True, 'prob': [0.0, 1.0]}

@@ -3,34 +3,74 @@ from flask_cors import CORS
 import numpy as np
 import pickle
 import os.path
-from helpers.model_helpers import clean_input as ci
-
 
 app = Flask(__name__)
-CORS(app, resources={r"/predict": {"origins": "*"}})
+CORS(app)
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 
-model = pickle.load(open(os.path.join(my_path, 'models/rf_model.pkl'),'rb'))
-vect = pickle.load(open(os.path.join(my_path, 'resources/tfidf_vect.pkl'),'rb'))
-
-@app.route('/predict')
+@app.route('/predict/', methods=['POST'])
 def predict():
     # get input text
     #data = request.get_json(silent=True)
     #text = data.get('text', "")
-    text = request.args.get('text', "")
-    text_cleaned = ci(text)
+    model_version = request.values.get("model", "v2_rf")
+    text = request.values.get('text', "")
+
+    if model_version == "v2_mnb":
+        # NAIVE BAYES, iteration 2
+        
+        # clean
+        from helpers.model_helpers import clean_all as ci
+        text_cleaned = ci(text)
+
+        # import trained resources
+        model = pickle.load(open(os.path.join(my_path, 'models/v2/mnb_model.pkl'),'rb'))
+        vect = pickle.load(open(os.path.join(my_path, 'resources/count_wb_vectorizer.pkl'),'rb'))
+    
+    elif model_version == "v2_rf":
+        # RANDOM FOREST, iteration 2
+        
+        # clean
+        from helpers.model_helpers import clean_all as ci
+        text_cleaned = ci(text)
+
+        # import trained resources
+        model = pickle.load(open(os.path.join(my_path, 'models/v2/rf_model.pkl'),'rb'))
+        vect = pickle.load(open(os.path.join(my_path, 'resources/count_wb_vectorizer.pkl'),'rb'))
+    
+    elif model_version == "v2_svm":
+        # SUPPORT VECTOR MACHINE, iteration 2
+
+        # clean
+        from helpers.model_helpers import clean_all as ci
+        text_cleaned = ci(text)
+
+        # import trained resources
+        model = pickle.load(open(os.path.join(my_path, 'models/v2/svm_model.pkl'),'rb'))
+        vect = pickle.load(open(os.path.join(my_path, 'resources/count_wb_vectorizer.pkl'),'rb'))
+        
+    elif model_version == 'v1_rf':
+        # oldest version, first try
+
+        # clean
+        from helpers.model_helpers import clean_input as ci
+        text_cleaned = ci(text)
+
+        # import trained resources
+        model = pickle.load(open(os.path.join(my_path, 'models/v1/rf_model.pkl'),'rb'))
+        vect = pickle.load(open(os.path.join(my_path, 'resources/tfidf_vect.pkl'),'rb'))
 
     # predict
     text_vect = vect.transform([text_cleaned])
     cls = model.predict(text_vect.toarray())
-    prob = model.predict_proba(text_vect.toarray())
+    prob = model.predict_proba(text_vect.toarray())    
 
     # prepare response
     response = {}
     response['text'] = text
     response['text_cleaned'] = text_cleaned
+    response['clf'] = model_version
     response['bin'] = cls.tolist()[0]
     response['prob'] = prob.tolist()[0]
 
