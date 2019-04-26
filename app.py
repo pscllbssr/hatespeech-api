@@ -9,6 +9,10 @@ CORS(app)
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 
+@app.route('/')
+def index():
+    return '<h1>Hatespeech API</h1>'
+
 @app.route('/predict/', methods=['POST'])
 def predict():
     # get input text
