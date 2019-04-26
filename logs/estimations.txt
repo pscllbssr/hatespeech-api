@@ -1,0 +1,1 @@
+{'text': '"dieses scheiss gesindel pack"', 'text_cleaned': 'scheiss gesindel pack', 'bin': False, 'prob': [0.6672312804504615, 0.33276871954953846]}
