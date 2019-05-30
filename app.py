@@ -9,6 +9,8 @@ CORS(app)
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 
+model_version_fallback = "v3_rf"
+
 @app.route('/')
 def index():
     return '<h1>Hatespeech API</h1>'
@@ -18,7 +20,7 @@ def predict():
     # get input text
     #data = request.get_json(silent=True)
     #text = data.get('text', "")
-    model_version = request.values.get("model", "v2_rf")
+    model_version = request.values.get("model", model_version_fallback)
     text = request.values.get('text', "")
 
     if model_version == "v2_mnb":
@@ -64,6 +66,17 @@ def predict():
         # import trained resources
         model = pickle.load(open(os.path.join(my_path, 'models/v1/rf_model.pkl'),'rb'))
         vect = pickle.load(open(os.path.join(my_path, 'resources/tfidf_vect.pkl'),'rb'))
+
+    elif model_version == 'v3_rf':
+        # latest version of random forest trained on large dataset
+
+        # clean
+        from helpers.model_helpers import clean_all as ci
+        text_cleaned = ci(text)
+
+        # import trained resources
+        model = pickle.load(open(os.path.join(my_path, 'models/v3/rf3_model.pkl'),'rb'))
+        vect = pickle.load(open(os.path.join(my_path, 'models/v3/char_vectorizer.pkl'),'rb'))
 
     # predict
     text_vect = vect.transform([text_cleaned])
